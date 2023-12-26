@@ -48,12 +48,15 @@ header .social-links {
   display: inline-block;
   position: absolute;
   bottom: 80px;
+  font-size: 32px;
 }
 header .social-links a {
   margin-inline-end: 4px;
+  text-decoration: none;
+  font-size: 16px;
 }
 header .social-links a i {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 nav {
@@ -79,4 +82,24 @@ main {
 }
 main section {
   padding-block: 16px;
+}
+
+#projects article {
+  padding: 30px 44px;
+  background-color: #161A30;
+  margin-block-end: 10px;
+}
+#projects article .title {
+  color: #F0ECE5;
+  font-size: 22px;
+  font-weight: bold;
+}
+#projects article .tags {
+  margin-block: 15px;
+}
+#projects article .tags span {
+  padding: 5px 15px;
+  background-color: #31304D;
+  border-radius: 1em;
+  color: #F0ECE5;
 }/*# sourceMappingURL=style.css.map */

@@ -58,12 +58,15 @@ header {
         display: inline-block;
         position: absolute;
         bottom: 80px;
+        font-size: 32px;
 
         a {
             margin-inline-end: 4px;
-
+            text-decoration: none;
+            font-size: 16px;
+            
             i {
-                font-size: 24px;
+                font-size: 18px
             }
         }
     }
@@ -99,5 +102,32 @@ main {
     
     section {
         padding-block: 16px;
+    }
+}
+
+#projects {
+    article {
+        // border: 1px solid white;
+        // border-radius: 0.5em;
+        padding: 30px 44px;
+        background-color: $primary;
+        margin-block-end: 10px;
+
+        .title {
+            color: $light;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        .tags {
+            margin-block: 15px;
+
+            span {
+                padding: 5px 15px;
+                background-color: $secondary;
+                border-radius: 1em;
+                color: $light;
+            }
+        }
     }
 }

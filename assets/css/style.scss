@@ -1,8 +1,16 @@
+// colors
 $primary: #161A30;
 $secondary: #31304D;
 $highlight: #B6BBC4;
 $light: #F0ECE5;
 $dark: #0e111f;
+
+// breakpoints
+$xs: 320px;
+$sm: 480px;
+$md: 769px;
+$lg: 1025px;
+$xl: 1201px;
 
 * {
     margin: 0;
@@ -20,6 +28,11 @@ html {
 body {
     background-color: $dark;
     display: flex;
+
+    @media screen and (max-width: $sm) {
+        display: block;
+        padding: 48px 24px;
+    }
 }
 
 h1 {
@@ -36,18 +49,40 @@ header {
     height: 100%;
     padding: 95px 0 80px 68px;
 
+    @media screen and (max-width: $sm) {
+        width: 100%;
+        position: relative;
+        padding: 0;
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
     .title {
         color: $light;
     }
 
     .subtitle {
-        margin-top: 12px;
         color: $light;
+        margin-top: 12px;
+
+        @media screen and (max-width: $sm) {
+            margin-top: 0;
+        }
     }
 
     .description {
         line-height: 2;
         margin-top: 38px;
+
+        @media screen and (max-width: $sm) {
+            margin-top: 19px;
+        }
     }
     
     .nav-link {
@@ -58,7 +93,12 @@ header {
         display: inline-block;
         position: absolute;
         bottom: 80px;
-        font-size: 32px;
+
+        @media screen and (max-width: $sm) {
+            position: relative;
+            bottom: 0;
+            margin-top: 28px;
+        }
 
         a {
             margin-inline-end: 4px;
@@ -68,6 +108,14 @@ header {
             i {
                 font-size: 18px
             }
+
+            @media screen and (max-width: $sm) {
+                font-size: 12px;
+
+                i {
+                    font-size: 14px
+                }
+            }
         }
     }
 }
@@ -75,15 +123,15 @@ header {
 nav {
     margin-top: 64px;
 
+    @media screen and (max-width: $sm) {
+        display: none;
+    }
+
     ul {
         list-style: none;
 
         li {
             padding-block: 12px;
-
-            a {
-                
-            }
 
             &:hover {
                 color: $light;
@@ -99,19 +147,56 @@ main {
     margin-left: 600px;
     width: 100%;
     padding: 95px 68px 80px 50px;
+
+    @media screen and (max-width: $sm) {
+        margin: 15px 0 0 0;
+        padding: 0; 
+    }
     
     section {
         padding-block: 16px;
+
+        @media screen and (max-width: $sm) {
+            .content {
+                padding-top: 24px;
+            }
+        }
+
+        .sticky {
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: fixed;
+            background-color: $primary+F2;
+            box-shadow: 0 5px 20px black;
+            padding: 10px 24px;
+        }
+
+        .section-header {
+            display: none;
+
+            @media screen and (max-width: $sm) {
+                display: block;
+            }
+        }
     }
 }
 
 #projects {
     article {
-        // border: 1px solid white;
-        // border-radius: 0.5em;
         padding: 30px 44px;
-        background-color: $primary;
         margin-block-end: 10px;
+        border-radius: 10px;
+        transition: 0.2s;
+        background-color: $primary;
+
+        @media screen and (max-width: $sm) {
+            padding: 22px 26px;
+        }
+
+        &:hover {
+            transform: scale(1.08);
+        }
 
         .title {
             color: $light;

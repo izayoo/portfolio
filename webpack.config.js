@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     entry: './src/js/script.js',
@@ -27,5 +28,9 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery'
         })
-    ]
+    ],
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()],
+    },
 };

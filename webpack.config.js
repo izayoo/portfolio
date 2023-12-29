@@ -6,7 +6,7 @@ module.exports = {
     target: 'web',
     output: {
         filename: './bundle.js',
-        path: path.resolve(__dirname, './src/js/dist'),
+        path: path.resolve(__dirname, './dist'),
         libraryTarget: 'var',
         library: 'EntryPoint'
     },

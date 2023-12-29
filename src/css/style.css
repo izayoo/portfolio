@@ -175,6 +175,11 @@ main section .section-header {
 #projects article:hover {
   transform: scale(1.08);
 }
+@media screen and (max-width: 480px) {
+  #projects article:hover {
+    transform: none;
+  }
+}
 #projects article .title {
   color: #F0ECE5;
   font-size: 22px;

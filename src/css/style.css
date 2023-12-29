@@ -160,6 +160,13 @@ main section .section-header {
   }
 }
 
+#about .content p:nth-child(1) {
+  margin-top: 0;
+}
+#about .content p {
+  margin-top: 1em;
+}
+
 #projects article {
   padding: 30px 44px;
   margin-block-end: 10px;

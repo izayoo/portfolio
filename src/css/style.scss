@@ -182,6 +182,18 @@ main {
     }
 }
 
+#about {
+    .content {
+        p:nth-child(1) {
+            margin-top: 0;
+        }
+
+        p {
+            margin-top: 1em;
+        }
+    }
+}
+
 #projects {
     article {
         padding: 30px 44px;
